@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de" class="bg-[#140d17]">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wie du ihren Kontakt bekommst – Registrierung Schritt für Schritt</title>
+<meta name="description" content="Einfache Anleitung: Registriere dich in 4 Schritten und bestätige deine E-Mail, um ihren Kontakt zu erhalten. Die Registrierung ist kostenlos.">
+
+<!-- Favicon con la imagen del corazón -->
+<link rel="icon" href="https://i.imgur.com/MX47WCh.png" type="image/png">
+<link rel="apple-touch-icon" href="https://i.imgur.com/MX47WCh.png">
+
+<style>
+  /* Reseteo y estilos base idénticos al diseño original oscuro */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #140d17;
+    color: #ffffff;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Contenedor principal de la tarjeta de fotos (Móvil) */
+  .carousel-box {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    height: 580px;
+    aspect-ratio: 720 / 1280;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    margin: 0 auto;
+  }
+
+  /* Ajuste de tamaño para Versión Escritorio (mayor altura y tamaño prominente) */
+  @media (min-width: 768px) {
+    .carousel-box {
+      max-width: 460px;
+      height: 80vh;
+      max-height: 720px;
+      border-radius: 2rem;
+    }
+  }
+
+  /* Transición suave entre fotos */
+  .slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    pointer-events: none;
+  }
+
+  .slide-img.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Estructura general de la sección */
+  main {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .content-grid {
+    display: grid;
+    width: 100%;
+    max-width: 1100px;
+    gap: 2.5rem;
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .content-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3.5rem;
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  /* Control del tamaño y margen del logotipo para separarlo del título */
+  .main-logo {
+    max-height: 110px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .main-logo {
+      max-height: 140px;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  h1 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #a1a1aa;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  /* Botón de llamada a la acción */
+  .cta-button {
+    display: inline-flex;
+    width: 100%;
+    min-height: 4rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border-radius: 9999px;
+    background-color: #f43f5e;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 10px 30px -8px rgba(244, 63, 94, 0.5);
+    transition: transform 0.2s, filter 0.2s;
+  }
+
+  .cta-button:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+  }
+
+  .cta-button:active {
+    transform: scale(0.98);
+  }
+</style>
+</head>
+
+<body oncontextmenu="return false;">
+<main>
+<section class="content-grid">
+
+  <!-- Contenedor del carrusel con protección anticlic -->
+  <div class="carousel-box" oncontextmenu="return false;">
+
+    <!-- Imagen 1 -->
+    <img alt="Kassandra 1" width="720" height="1280" decoding="async" class="slide-img active" src="https://i.imgur.com/Wq6CE9o.jpeg" draggable="false" ondragstart="return false;">
+
+    <!-- Imagen 2 -->
+    <img alt="Kassandra 2" width="720" height="1280" decoding="async" class="slide-img" src="https://i.imgur.com/KjlkSUL.jpeg" draggable="false" ondragstart="return false;">
+
+    <!-- Imagen 3 -->
+    <img alt="Kassandra 3" width="720" height="1280" decoding="async" class="slide-img" src="https://i.imgur.com/MiQbm9w.jpeg" draggable="false" ondragstart="return false;">
+
+    <!-- Texto "Kassandra💗" en negro, sin fondo, situado en la esquina superior derecha -->
+    <div style="position: absolute; top: 1.25rem; right: 1.5rem; left: auto; z-index: 20;">
+      <span style="font-family: serif; font-size: 1.4rem; font-weight: bold; color: #000000; letter-spacing: 0.05em; text-shadow: 0 1px 3px rgba(255,255,255,0.8);">Lissa💗</span>
+    </div>
+
+    <!-- Indicador Online en la esquina inferior izquierda -->
+    <span style="position: absolute; bottom: 0.75rem; left: 0.75rem; z-index: 10; display: inline-flex; align-items: center; gap: 0.5rem; border-radius: 9999px; background-color: rgba(20, 13, 23, 0.8); padding: 0.25rem 0.75rem; font-size: 0.875rem; font-weight: 500; backdrop-filter: blur(4px);">
+      <span style="width: 0.5rem; height: 0.5rem; border-radius: 9999px; background-color: #10b981;" aria-hidden="true"></span>online
+    </span>
+  </div>
+
+  <div class="text-container">
+    <!-- Logotipo posicionado más arriba con mayor margen de separación -->
+    <img src="https://i.imgur.com/TJCzJLn.png" alt="Logo" class="main-logo" draggable="false" ondragstart="return false;">
+
+    <h1>Möchtest du ihren Kontakt? Du musst dich registrieren und deine E-Mail bestätigen.</h1>
+    <p>Es ist ganz einfach. Ich zeige dir genau, was du tun musst.</p>
+
+    <!-- Botón con redirección -->
+    <a href="https://safeoffers.pro/a/QWlDzho3BvfQkEx" class="cta-button">
+      Chat starten
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+    </a>
+  </div>
+</section>
+</main>
+
+<script>
+  // Cambio automático de fotos cada 3 segundos (3000ms)
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide-img");
+    let currentIndex = 0;
+
+    if (slides.length > 0) {
+      setInterval(() => {
+        slides[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add("active");
+      }, 3000);
+    }
+  });
+
+  // Bloqueo de anticlic y combinaciones para guardar o inspeccionar código
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  }, false);
+
+  document.addEventListener("keydown", function (e) {
+    if (
+      e.key === "F12" ||
+      (e.ctrlKey && (e.key === "u" || e.key === "U" || e.key === "s" || e.key === "S")) ||
+      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i" || e.key === "J" || e.key === "j" || e.key === "C" || e.key === "c"))
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
+</body>
+</html>
